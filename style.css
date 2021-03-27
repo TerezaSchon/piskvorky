@@ -123,19 +123,22 @@ p {
   font-weight: lighter;
   font-style: italic;
   text-align: center;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 10px;
 }
 
 figure {
-  margin: auto;
+  margin: 10px;
   max-width: 100%;
 }
 
 figcaption {
   padding: 3px;
   text-align: center;
+  font-size: 0.8em;
 }
 
 #obr1,
@@ -144,7 +147,7 @@ figcaption {
 #obr4,
 #obr5,
 #obr6 {
-  margin: 15px 5px 5px 5px;
+  margin: 0;
   border-radius: 0px;
   max-width: 100%;
 }
