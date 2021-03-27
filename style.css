@@ -178,6 +178,9 @@ figcaption {
 
 /* tablet */
 @media (min-width: 540px) {
+  .obal {
+    width: 540px;
+  }
   .obrazky-ukazky {
     flex-direction: row;
     flex-wrap: wrap;
@@ -202,10 +205,9 @@ figcaption {
   flex-grow: 1;
 }
 
-/* desktop 
- figure {
-    display: block;
-    flex-direction: column;
-    max-width: 40%;
+/* desktop */
+@media (min-width: 1000px) {
+  .obal .obal-pravidla {
+    width: 540px;
   }
- */
+}
