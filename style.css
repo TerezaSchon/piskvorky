@@ -10,12 +10,13 @@ html {
 /*tady bude můj css*/
 
 body {
-  margin: 0;
+  display: flex;
+  margin: 3rem auto;
   padding: 3rem;
   width: 100vw;
   min-height: 100vh;
   background-image: linear-gradient(#615dad, #ffc8da);
-  word-break: break-word;
+
   background-repeat: no-repeat;
   justify-content: center;
 }
@@ -23,13 +24,12 @@ body {
 .obal {
   display: flex;
   flex-direction: column;
-  max-width: 25%;
-  max-height: 75%;
+
+  width: 360px;
   background-color: #283e50;
   border-radius: 5px 5px 0 0;
   color: white;
-  margin: 3rem auto;
-  justify-content: center;
+  margin: auto;
 }
 
 img {
@@ -43,6 +43,7 @@ main {
 
 h1 {
   font-family: 'Lobster', cursive;
+  letter-spacing: 1px;
 }
 
 p {
@@ -66,7 +67,7 @@ p {
   font-weight: lighter;
 }
 
-.pravidla {
+.btn-pravidla {
   background-color: #1fcca4;
   padding: 15px;
   margin: 0 0 2px 0;
@@ -74,17 +75,134 @@ p {
   text-decoration: none;
 }
 
-.pravidla:hover {
+.btn-pravidla:hover {
   background-color: #1cbb96;
 }
 
-.zacithrat {
+.btn-zacithrat {
   background-color: #0197f6;
   padding: 15px;
   color: white;
   text-decoration: none;
 }
 
-.zacithrat:hover {
+.btn-zacithrat:hover {
   background-color: #0090e9;
 }
+
+/*CSS pro stránku Pravidla*/
+
+.obal-pravidla {
+  width: 360px;
+  background-color: #283e50;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  margin: auto;
+  justify-content: left;
+}
+
+.text-pravidla {
+  padding: 0px 20px 0 20px;
+}
+
+.odrazky {
+  text-align: left;
+  padding-left: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+}
+
+.ikona-kolecko,
+.ikona-krizek {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
+}
+.obrazky-ukazky {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+figure {
+  margin: auto;
+  max-width: 100%;
+}
+
+figcaption {
+  padding: 3px;
+  text-align: center;
+}
+
+#obr1,
+#obr2,
+#obr3,
+#obr4,
+#obr5,
+#obr6 {
+  margin: 15px 5px 5px 5px;
+  border-radius: 0px;
+  max-width: 100%;
+}
+
+/* ---HOTOVO: spodek-tlačítka--- (tlačítko Začít hrát už je nadefinované výše, propisuje se i na tuto stránku) */
+
+.tlacitka-v-pravidlech {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  padding: 0;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+}
+
+.btn-uvodni-stranka {
+  background-color: #1fcca4;
+  padding: 15px;
+  margin: 0 0 2px 0;
+  color: white;
+  text-decoration: none;
+}
+.btn-uvodni-stranka:hover {
+  background-color: #1cbb96;
+}
+
+/* tablet */
+@media (min-width: 540px) {
+  .obrazky-ukazky {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .obal-pravidla {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 540px;
+  }
+  figure {
+    display: block;
+    flex-direction: row;
+    max-width: 40%;
+  }
+}
+
+.tlacitka-v-pravidlech {
+  margin: auto 0 0 0;
+  flex-grow: 1;
+}
+
+/* desktop 
+ figure {
+    display: block;
+    flex-direction: column;
+    max-width: 40%;
+  }
+ */
