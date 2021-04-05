@@ -46,7 +46,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-p {
+.popis-hry {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
 
@@ -59,15 +59,14 @@ p {
 .tlacitka {
   display: flex;
   flex-direction: column;
-
   text-align: center;
   padding: 0;
-
+  flex-basis: 100%;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
 }
 
-.btn-pravidla {
+.btn-green {
   background-color: #1fcca4;
   padding: 15px;
   margin: 0 0 2px 0;
@@ -75,22 +74,23 @@ p {
   text-decoration: none;
 }
 
-.btn-pravidla:hover {
+.btn-green:hover {
   background-color: #1cbb96;
 }
 
-.btn-zacithrat {
+.btn-blue {
   background-color: #0197f6;
   padding: 15px;
   color: white;
   text-decoration: none;
 }
 
-.btn-zacithrat:hover {
+.btn-green:hover {
   background-color: #0090e9;
 }
 
-/*CSS pro stránku Pravidla*/
+/* ---- CSS pro stránku PRAVIDLA ---- */
+/* ---------------------------------- */
 
 .obal-pravidla {
   width: 360px;
@@ -152,30 +152,6 @@ figcaption {
   max-width: 100%;
 }
 
-/* ---HOTOVO: spodek-tlačítka--- (tlačítko Začít hrát už je nadefinované výše, propisuje se i na tuto stránku) */
-
-.tlacitka-v-pravidlech {
-  display: flex;
-  flex-direction: column;
-
-  text-align: center;
-  padding: 0;
-
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: lighter;
-}
-
-.btn-uvodni-stranka {
-  background-color: #1fcca4;
-  padding: 15px;
-  margin: 0 0 2px 0;
-  color: white;
-  text-decoration: none;
-}
-.btn-uvodni-stranka:hover {
-  background-color: #1cbb96;
-}
-
 /* tablet */
 @media (min-width: 540px) {
   .obal {
@@ -200,14 +176,98 @@ figcaption {
   }
 }
 
-.tlacitka-v-pravidlech {
-  margin: auto 0 0 0;
-  flex-grow: 1;
-}
-
 /* desktop */
 @media (min-width: 1000px) {
   .obal .obal-pravidla {
     width: 540px;
   }
+}
+/* ---- CSS pro stránku Hra ---- */
+/* ----------------------------- */
+
+.obal-hra {
+  max-width: 80vmin;
+  display: block;
+  margin: auto;
+}
+.nadpis-piskvorky-hra {
+  background-color: transparent;
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.menu-hra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem;
+}
+
+.kdo-hraje {
+  display: block;
+  align-items: center;
+}
+
+.ikona-kolecko {
+  margin-bottom: -0.25rem;
+}
+
+.ikony a {
+  display: inline-block;
+  text-align: center;
+}
+
+.ikona-domecek {
+  text-decoration: none;
+  background-color: #1fcca4;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 7px;
+  width: 3rem;
+}
+
+.ikona-domecek:hover {
+  background-color: #1cbb96;
+}
+
+.ikona-restart {
+  text-decoration: none;
+  background-color: #0197f6;
+  padding: 0.5rem;
+  width: 3rem;
+
+  color: white;
+  border-radius: 7px;
+  margin-right: auto;
+}
+
+.ikona-restart:hover {
+  background-color: #0090e9;
+}
+/* --- hrací pole (BOX) --- */
+.box {
+  border: solid 1px black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vmin;
+  height: 80vmin;
+  background: linear-gradient(#c3b8cc 0%, #fcd9e5 100%);
+  padding: 0;
+}
+.box__button {
+  flex-basis: 10%;
+  border: solid 1px #000000;
+  color: transparent;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+.box__button:hover {
+  background-color: #b5a8c0;
 }
