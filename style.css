@@ -85,7 +85,7 @@ h1 {
   text-decoration: none;
 }
 
-.btn-green:hover {
+.btn-blue:hover {
   background-color: #0090e9;
 }
 
@@ -270,4 +270,21 @@ figcaption {
 
 .box__button:hover {
   background-color: #b5a8c0;
+}
+
+/* focus funguje jen bckg-color... */
+.box__button:focus {
+  background-color: #918799;
+  border-color: #918799;
+  box-shadow: #73697a;
+}
+
+.kolecko {
+  background-image: url('obrazky/kolecko.svg');
+  background-repeat: no-repeat;
+}
+
+.krizek {
+  background-image: url('obrazky/krizek.svg');
+  background-repeat: no-repeat;
 }
