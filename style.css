@@ -266,6 +266,7 @@ figcaption {
   cursor: pointer;
   padding: 0;
   background-color: transparent;
+  background-position: center;
 }
 
 .box__button:hover {

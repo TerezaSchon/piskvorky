@@ -64,7 +64,11 @@ let zmenaHrace = () => {
   console.log(kdoJeNaTahu());
   if (kdoJeNaTahu() === 'kolecko') {
     document.querySelector('.ikona-kolecko').attributes.alt.value = 'krizek';
+    document.querySelector('.ikona-kolecko').attributes.src.value =
+      'obrazky/krizek.svg';
   } else {
     document.querySelector('.ikona-kolecko').attributes.alt.value = 'kolecko';
+    document.querySelector('.ikona-kolecko').attributes.src.value =
+      'obrazky/kolecko.svg';
   }
 };
